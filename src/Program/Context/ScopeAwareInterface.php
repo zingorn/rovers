@@ -11,6 +11,8 @@ namespace Nasa\Program\Context;
 use Nasa\Model\Coordinate\ScopeInterface;
 
 /**
+ * Интерфейс ожидания границ для контекста
+ *
  * Interface ScopeProviderInterface
  * @package Nasa\Program\Context
  */

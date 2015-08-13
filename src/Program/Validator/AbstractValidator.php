@@ -9,6 +9,8 @@
 namespace Nasa\Program\Validator;
 
 /**
+ * Абстрактный валидатор
+ *
  * Class AbstractValidator
  * @package Nasa\Program\Validator
  */

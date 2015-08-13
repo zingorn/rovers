@@ -9,6 +9,8 @@
 namespace Nasa\Model\Direction;
 
 /**
+ * Класс направления по сторонам Света
+ *
  * Class EasyDirection
  * @package Nasa\Model
  */

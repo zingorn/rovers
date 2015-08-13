@@ -9,6 +9,8 @@
 namespace Nasa\Program\Validator;
 
 /**
+ * Интерфейс валидатора
+ *
  * Interface ValidatorInterface
  * @package Nasa\Program\Validator
  */

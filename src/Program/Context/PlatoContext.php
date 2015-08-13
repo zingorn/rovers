@@ -13,6 +13,7 @@ use Nasa\Program\Validator\ValidatorFactory;
 
 /**
  * TODO: implement Validator chain
+ * Простой контекста
  *
  * Class PlatoContext
  * @package Nasa\Program\Context

@@ -8,6 +8,8 @@
 namespace Nasa\Program\Command;
 
 /**
+ * Интерфейс команды для программы
+ *
  * Interface CommandInterface
  * @package Nasa\Program\Command
  */

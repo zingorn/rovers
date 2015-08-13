@@ -9,6 +9,8 @@
 namespace Nasa\Program\Context;
 
 /**
+ * Интерфейс валидации команд на контексте
+ *
  * Interface ValidateCommandInterface
  * @package Nasa\Program\Context
  */

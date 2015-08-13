@@ -17,6 +17,7 @@ use Nasa\Program\Command\Exception\InvalidMoveHandlerWrappedClass;
 use Nasa\Program\Command\Move\Handler\AbstractHandler;
 
 /**
+ *
  * Class MoveHandlerFactory
  * @package Nasa\Program\Command\Move
  */

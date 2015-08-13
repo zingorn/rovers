@@ -9,6 +9,8 @@
 namespace Nasa\Model\Rover;
 
 /**
+ * Интерфейс робота
+ *
  * Interface RoverInterface
  * @package Nasa\Model\Rover
  */

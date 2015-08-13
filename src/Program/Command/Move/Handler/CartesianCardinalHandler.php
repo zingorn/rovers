@@ -20,6 +20,8 @@ use Nasa\Program\Context\ObjectsProviderInterface;
 use Nasa\Program\Context\ScopeAwareInterface;
 
 /**
+ * Обработчик команда передвижения в прямоугольной системе координат с ориентацией по сторонам Света.
+ *
  * Class CartesianCardinalHandler
  * @package Nasa\Program\Command\Move\Handler
  */

@@ -9,6 +9,8 @@
 namespace Nasa\Program\Interpreter;
 
 /**
+ * Интерфейс интерпритатора кода программ
+ *
  * Interface InterpreterInterface
  * @package Nasa\Program\Interpreter
  */

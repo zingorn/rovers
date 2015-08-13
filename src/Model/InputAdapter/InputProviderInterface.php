@@ -9,6 +9,8 @@
 namespace Nasa\Model\InputAdapter;
 
 /**
+ * Интерфейс зависимости прибора ввода
+ *
  * Interface InputProviderInterface
  * @package Nasa\Model\InputAdapter
  */

@@ -8,6 +8,8 @@
 namespace Nasa\Model\Direction;
 
 /**
+ * Интерфейс направления(ориентации)
+ *
  * Interface DirectionInterface
  * @package Nasa\Model\Direction
  */

@@ -9,6 +9,8 @@
 namespace Nasa\Program\Context;
 
 /**
+ * Интейфейс зависимости обектов в контексте
+ *
  * Interface ObjectsProviderInterface
  * @package Nasa\Program\Context
  */

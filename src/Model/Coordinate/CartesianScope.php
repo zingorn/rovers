@@ -10,6 +10,8 @@ namespace Nasa\Model\Coordinate;
 use Nasa\Model\Exception\InvalidArgumentException;
 
 /**
+ * Границы прямоугольной системы координат
+ *
  * Class CartesianScope
  * @package Nasa\Model\Coordinate
  */

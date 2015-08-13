@@ -8,6 +8,8 @@
 namespace Nasa\Program;
 
 /**
+ * Интефейс программы для роботов
+ *
  * Interface ProgramInterface
  * @package Nase\Program
  */

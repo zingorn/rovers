@@ -9,6 +9,8 @@
 namespace Nasa\Program\Context;
 
 /**
+ * Интерфейс контекста выполнеия программы
+ *
  * Interface ContextInterface
  * @package Nasa\Program\Context
  */

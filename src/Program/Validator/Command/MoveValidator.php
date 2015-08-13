@@ -15,6 +15,8 @@ use Nasa\Program\Context\ContextInterface;
 use Nasa\Program\Validator\AbstractValidator;
 
 /**
+ * Валидатор команды перемещения объекта к контексте
+ *
  * Class MoveValidator
  * @package Nasa\Program\Validator\Command
  */

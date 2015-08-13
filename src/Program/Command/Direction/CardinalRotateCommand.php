@@ -14,6 +14,8 @@ use Nasa\Program\Command\CommandInterface;
 use Nasa\Program\Command\Exception\InvalidArgumentException;
 
 /**
+ * Команда поворота по сторонам Света
+ *
  * Class RotateCommand
  * @package Nasa\Program\Command
  */

@@ -9,6 +9,8 @@
 namespace Nasa\Program\Context;
 
 /**
+ * Интерфейс зависимости контекста
+ *
  * Interface ContextAwareInterface
  * @package Nasa\Program\Context
  */

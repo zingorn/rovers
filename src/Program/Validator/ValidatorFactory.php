@@ -11,6 +11,9 @@ use Nasa\Program\Validator\Exception\InvalidArgumentException;
 use Nasa\Program\Validator\Exception\InvalidWrapperClass;
 
 /***
+ * Фабрика валидаторов.
+ * Создает произвольный фалидатор по типу и параметрам
+ *
  * Class ValidatorFactory
  * @package Nasa\Program\Validator
  */

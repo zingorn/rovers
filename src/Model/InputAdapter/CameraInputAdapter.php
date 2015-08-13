@@ -9,6 +9,8 @@
 namespace Nasa\Model\InputAdapter;
 
 /**
+ * Прибор ввода: камера
+ *
  * Class CameraInputAdapter
  * @package Nasa\Model\InputAdapter
  */

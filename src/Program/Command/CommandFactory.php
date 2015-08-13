@@ -12,6 +12,8 @@ use Nasa\Program\Exception\InvalidArgumentException;
 use Nasa\Program\Exception\InvalidWrapperClass;
 
 /**
+ * Фабрика команд для программы
+ *
  * Class CommandFactory
  * @package Nase\Program
  */

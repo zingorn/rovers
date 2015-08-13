@@ -9,6 +9,8 @@
 namespace Nasa\Model\Rover;
 
 /**
+ * Абстрактный класс робота
+ *
  * Class AbstractRover
  * @package Nasa\Model\Rover
  */

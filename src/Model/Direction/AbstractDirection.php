@@ -9,6 +9,8 @@
 namespace Nasa\Model\Direction;
 
 /**
+ * Абстрактная сущность направления
+ *
  * Class AbstractDirection
  * @package Nasa\Model
  */

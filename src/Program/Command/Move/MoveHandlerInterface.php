@@ -11,6 +11,8 @@ namespace Nasa\Program\Command\Move;
 use Nasa\Model\Rover\RoverInterface;
 
 /**
+ * Интерфейс обработчика команды движения
+ *
  * Interface MoveHandlerInterface
  * @package Nasa\Program\Command\Move
  */

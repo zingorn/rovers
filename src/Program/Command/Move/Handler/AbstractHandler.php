@@ -15,6 +15,9 @@ use Nasa\Program\Context\ContextInterface;
 use Nasa\Program\Validator\AbstractValidator;
 
 /**
+ * Абстрактный обработчик команды движения.
+ * Требует от потомков реализовать перемещение и проверку возможности выполнения команды
+ *
  * Class AbstractHandler
  * @package Nasa\Program\Command\Move\Handler
  */

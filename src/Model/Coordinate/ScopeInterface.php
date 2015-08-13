@@ -9,6 +9,8 @@
 namespace Nasa\Model\Coordinate;
 
 /**
+ * Интерфейс описания и валидации границ системы координат
+ *
  * Interface ScopeInterface
  * @package Nasa\Model\Coordinate
  */

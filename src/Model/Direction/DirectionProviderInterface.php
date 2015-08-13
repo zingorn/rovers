@@ -9,6 +9,8 @@
 namespace Nasa\Model\Direction;
 
 /**
+ * Интерфейс зависимости направления
+ *
  * Interface DirectionProviderInterface
  * @package Nasa\Model\Direction
  */

@@ -14,6 +14,8 @@ use Nasa\Model\Coordinate\CoordinateInterface;
 use Nasa\Model\Direction\DirectionInterface;
 
 /**
+ * Примитивный робот
+ *
  * Class Rover
  * @package Nasa\Model\Rover
  */

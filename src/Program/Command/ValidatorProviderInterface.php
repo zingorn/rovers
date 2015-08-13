@@ -10,6 +10,7 @@ namespace Nasa\Program\Command;
 
 /**
  * TODO: define methods addValidator, removeValidator
+ * Интерфейс предоставления информации о валидаторах
  *
  * Interface ValidatorProviderInterface
  * @package Nasa\Program\Command

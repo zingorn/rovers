@@ -7,7 +7,10 @@
  */
 
 namespace Nasa\Model\InputAdapter;
+
 /**
+ * Абстрактный класс приборов ввода
+ *
  * Class AbstractInputAdapter
  * @package Nasa\Model\InputAdapter
  */

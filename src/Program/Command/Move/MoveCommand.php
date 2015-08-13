@@ -12,6 +12,10 @@ use Nasa\Program\Command\CommandInterface;
 use Nasa\Program\Command\ValidatorProviderInterface;
 
 /**
+ * Команда передвижения
+ * Данная команда требует от объекта расположение на системе координат и направление движения
+ * По этим данным создает Команду Движения(Handler) для изменения положения объекта
+ *
  * Class MoveCommand
  * @package Nasa\Program\Command\Move
  */
