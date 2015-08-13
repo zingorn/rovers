@@ -20,9 +20,8 @@ interface CoordinateInterface
     public function __toString();
 
     /**
-     * @param CoordinateInterface $first
      * @param CoordinateInterface $second
      * @return mixed
      */
-    public function isEqualCoordinates($first, $second);
+    public function isEqualCoordinates($second);
 }

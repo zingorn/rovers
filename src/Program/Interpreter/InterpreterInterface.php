@@ -7,7 +7,6 @@
  */
 
 namespace Nasa\Program\Interpreter;
-use Nasa\Program\Command\CommandInterface;
 
 /**
  * Interface InterpreterInterface
@@ -16,6 +15,7 @@ use Nasa\Program\Command\CommandInterface;
 interface InterpreterInterface 
 {
     /**
+     * @param mixed $value
      * @return mixed
      */
     public function interpret($value);

@@ -7,7 +7,10 @@
  */
 
 namespace Nasa\Tests;
-
+/**
+ * Class CoordinateTest
+ * @package Nasa\Tests
+ */
 class CoordinateTest extends \PHPUnit_Framework_TestCase
 {
 

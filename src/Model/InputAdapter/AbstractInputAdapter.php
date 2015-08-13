@@ -7,7 +7,10 @@
  */
 
 namespace Nasa\Model\InputAdapter;
-
+/**
+ * Class AbstractInputAdapter
+ * @package Nasa\Model\InputAdapter
+ */
 abstract class AbstractInputAdapter implements InputAdapterInterface
 {
 }

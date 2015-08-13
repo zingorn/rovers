@@ -7,6 +7,8 @@
  */
 namespace Nasa\Program\Command\Direction;
 
+use Nasa\Model\Direction\CardinalDirection;
+use Nasa\Model\Direction\DirectionProviderInterface;
 use Nasa\Model\Rover\RoverInterface;
 use Nasa\Program\Command\CommandInterface;
 use Nasa\Program\Command\Exception\InvalidArgumentException;
@@ -34,7 +36,7 @@ class CardinalRotateCommand implements CommandInterface
     protected $direction;
 
     /**
-     *
+     * @param array|null $options
      */
     public function __construct($options = null)
     {
@@ -60,12 +62,31 @@ class CardinalRotateCommand implements CommandInterface
      */
     public function execute($object)
     {
-        if (!$object instanceof RoverInterface) {
-            throw new InvalidArgumentException('Object must implements \Nasa\Model\Rover\RoverInterface');
+        if (!$object instanceof DirectionProviderInterface) {
+            throw new InvalidArgumentException('Object must implements \Nasa\Model\Direction\DirectionProviderInterface');
         }
 
-        $value = $object->getDirection()->getValue();
 
+        $objectDirection = $object->getDirection();
+        $dir = $this->getDirection();
+
+        switch ($objectDirection->getValue()) {
+            case CardinalDirection::NORTH:
+                $objectDirection->setValue($dir == self::DIRECTION_LEFT ? CardinalDirection::WEST : CardinalDirection::EAST);
+                break;
+
+            case CardinalDirection::EAST:
+                $objectDirection->setValue($dir == self::DIRECTION_LEFT ? CardinalDirection::NORTH : CardinalDirection::SOUTH);
+                break;
+
+            case CardinalDirection::SOUTH:
+                $objectDirection->setValue($dir == self::DIRECTION_LEFT ? CardinalDirection::EAST : CardinalDirection::WEST);
+                break;
+
+            case CardinalDirection::WEST:
+                $objectDirection->setValue($dir == self::DIRECTION_LEFT ? CardinalDirection::SOUTH : CardinalDirection::NORTH);
+                break;
+        }
     }
 
     /**

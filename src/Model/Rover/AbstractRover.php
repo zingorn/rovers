@@ -8,11 +8,6 @@
 
 namespace Nasa\Model\Rover;
 
-
-use Nasa\Model\Coordinate\CoordinateInterface;
-use Nasa\Model\Direction\DirectionInterface;
-use Nasa\Model\InputAdapter\InputAdapterInterface;
-
 /**
  * Class AbstractRover
  * @package Nasa\Model\Rover

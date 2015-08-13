@@ -7,7 +7,6 @@
  */
 
 namespace Nasa\Model\Direction;
-use Nasa\Model\Exception\InvalidArgumentException;
 
 /**
  * Class EasyDirection
@@ -35,9 +34,20 @@ class CardinalDirection extends AbstractDirection
      */
     public function __toString()
     {
-        if (!array_key_exists($this->getValue(), $this->translate)) {
-            throw new InvalidArgumentException($this->getValue() . 'is invalid direction');
+        return !array_key_exists($this->getValue(), $this->translate) ? '' : $this->translate[$this->getValue()];
+    }
+
+    /**
+     * @param string $alias
+     * @return CardinalDirection
+     */
+    public static function createByAlias($alias)
+    {
+        $instance = new self();
+        if (in_array($alias, $instance->translate)) {
+            $value = array_search($alias, $instance->translate);
+            $instance->setValue($value);
         }
-        return $this->translate[$this->getValue()];
+        return $instance;
     }
 }

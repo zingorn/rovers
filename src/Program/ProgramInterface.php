@@ -7,8 +7,6 @@
  */
 namespace Nasa\Program;
 
-use Nasa\Model\Rover\RoverInterface;
-
 /**
  * Interface ProgramInterface
  * @package Nase\Program
@@ -32,8 +30,8 @@ interface ProgramInterface
     public function getOutput();
 
     /**
-     * @param RoverInterface $rover
-     * @return $this
+     * @param mixed $object
+     * @return mixed
      */
-    public function run(RoverInterface $rover);
+    public function run($object);
 }

@@ -8,7 +8,10 @@
 
 namespace Nasa\Tests;
 
-
+/**
+ * Class DirectionTest
+ * @package Nasa\Tests
+ */
 class DirectionTest extends \PHPUnit_Framework_TestCase
 {
 

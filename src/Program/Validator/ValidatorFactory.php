@@ -7,7 +7,6 @@
  */
 
 namespace Nasa\Program\Validator;
-use Nasa\Program\Context\ContextAwareInterface;
 use Nasa\Program\Validator\Exception\InvalidArgumentException;
 use Nasa\Program\Validator\Exception\InvalidWrapperClass;
 
@@ -19,7 +18,8 @@ class ValidatorFactory
 {
     /**
      * @param array $params
-     * @return ValidatorInterface
+     * @return mixed
+     * @throws InvalidWrapperClass
      */
     public static function create(array $params)
     {

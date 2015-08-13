@@ -41,11 +41,17 @@ class CartesianScope implements ScopeInterface
      */
     public function setOptions(array $options)
     {
-        if (isset($options['scopeX']) && is_numeric($options['scopeX'])) {
-            $this->setMinScopeX(doubleval($options['scopeX']));
+        if (isset($options['minScopeX']) && is_numeric($options['minScopeX'])) {
+            $this->setMinScopeX(doubleval($options['minScopeX']));
         }
-        if (isset($options['scopeY']) && is_numeric($options['scopeY'])) {
-            $this->setMinScopeY(doubleval($options['scopeY']));
+        if (isset($options['maxScopeX']) && is_numeric($options['maxScopeX'])) {
+            $this->setMaxScopeX(doubleval($options['maxScopeX']));
+        }
+        if (isset($options['minScopeY']) && is_numeric($options['minScopeY'])) {
+            $this->setMinScopeY(doubleval($options['minScopeY']));
+        }
+        if (isset($options['maxScopeY']) && is_numeric($options['maxScopeY'])) {
+            $this->setMaxScopeY(doubleval($options['maxScopeY']));
         }
     }
 

@@ -7,7 +7,6 @@
  */
 
 namespace Nasa\Program\Validator;
-use Nasa\Program\Context\ContextInterface;
 
 /**
  * Interface ValidatorInterface

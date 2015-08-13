@@ -8,7 +8,10 @@
 
 namespace Nasa\Model\InputAdapter;
 
-
+/**
+ * Interface InputAdapterInterface
+ * @package Nasa\Model\InputAdapter
+ */
 interface InputAdapterInterface
 {
 }

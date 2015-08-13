@@ -8,7 +8,10 @@
 
 namespace Nasa\Model\InputAdapter;
 
-
+/**
+ * Class CameraInputAdapter
+ * @package Nasa\Model\InputAdapter
+ */
 class CameraInputAdapter extends AbstractInputAdapter
 {
 

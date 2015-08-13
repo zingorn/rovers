@@ -7,9 +7,9 @@
  */
 namespace Nasa\Program;
 
-use Nasa\Model\Rover\RoverInterface;
 use Nasa\Program\Command\CommandInterface;
 use Nasa\Program\Context\ContextInterface;
+use Nasa\Program\Context\ObjectsProviderInterface;
 use Nasa\Program\Context\ValidateCommandInterface;
 use Nasa\Program\Interpreter\InterpreterInterface;
 use Nasa\Program\Interpreter\SimpleMoveInterpreter;
@@ -52,16 +52,16 @@ class MoveProgram implements ProgramInterface
     /**
      * @var bool
      */
-    protected $throwInvalidCommand = false;
+    protected $throwInvalidCommand = true;
 
     /**
-     * @param RoverInterface $rover
+     * @param mixed $rover
      * @return $this
+     * @throws InvalidCommand
      */
-    public function run(RoverInterface $rover)
+    public function run($rover)
     {
         $context = $this->getContext();
-
         $commands = $this->getCommands();
         $context->setCurrentObject($rover);
 
@@ -71,11 +71,16 @@ class MoveProgram implements ProgramInterface
                 && !$context->validateCommand($command))
             {
                 if ($this->isThrowInvalidCommand()) {
-                    throw new InvalidCommand(get_class($command) . ' is invalid in this context. Reason: ' . $c);
+                    throw new InvalidCommand(get_class($command) . ' is invalid in this context. Reason: ' .
+                        implode(';', $context->getErrorMessages())
+                    );
                 }
                 continue;
             }
             $command->execute($rover);
+        }
+        if ($context instanceof ObjectsProviderInterface) {
+            $context->addObject($rover);
         }
 
         $this->output = sprintf('%s %s', $rover->getPosition(), $rover->getDirection());

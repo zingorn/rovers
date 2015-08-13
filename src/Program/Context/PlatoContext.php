@@ -37,9 +37,9 @@ class PlatoContext implements
     protected $currentObject;
 
     /**
-     * @var
+     * @var array
      */
-    protected $errorMessages;
+    protected $errorMessages = array();
 
     /**
      * @return array
@@ -94,19 +94,22 @@ class PlatoContext implements
     public function validateCommand($command)
     {
         $isValid = true;
+
         if ($command instanceof ValidatorProviderInterface) {
             $validators = $command->getValidatorsSpecification();
-
             foreach ($validators as $validatorParams) {
                 $validator = ValidatorFactory::create($validatorParams);
                 if ($validator instanceof ContextAwareInterface) {
                     $validator->setContext($this);
                 }
+
                 if (!$validator->isValid($this->getCurrentObject())) {
                     $this->errorMessages = array_merge($this->errorMessages, $validator->getErrors());
+                    $isValid = false;
                 }
             }
         }
+
         return $isValid;
     }
 

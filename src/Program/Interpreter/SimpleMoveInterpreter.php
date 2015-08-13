@@ -9,7 +9,6 @@
 namespace Nasa\Program\Interpreter;
 
 use Nasa\Program\Command\CommandFactory;
-use Nasa\Program\Command\CommandInterface;
 use Nasa\Program\Command\Direction\CardinalRotateCommand;
 use Nasa\Program\Interpreter\Exception\InvalidArgumentException;
 
@@ -23,7 +22,9 @@ use Nasa\Program\Interpreter\Exception\InvalidArgumentException;
 class SimpleMoveInterpreter implements InterpreterInterface
 {
     /**
-     * @return CommandInterface[]
+     * @param mixed $value
+     * @return array
+     * @throws \Nasa\Program\Exception\InvalidWrapperClass
      */
     public function interpret($value)
     {
@@ -42,7 +43,7 @@ class SimpleMoveInterpreter implements InterpreterInterface
                     break;
 
                 case 'M':
-                    $type = 'coordinate-cartesian-move';
+                    $type = 'move-move';
                     break;
 
                 default:
@@ -51,7 +52,7 @@ class SimpleMoveInterpreter implements InterpreterInterface
 
             $command = CommandFactory::getCommand(array(
                 'type' => $type,
-                'params' => $params
+                'options' => $params
             ));
             $commands[] = $command;
         }

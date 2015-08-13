@@ -70,17 +70,17 @@ class CartesianCoordinate implements CoordinateInterface
     }
 
     /**
-     * @param CartesianCoordinate $first
      * @param CartesianCoordinate $second
      * @return mixed
      */
-    public function isEqualCoordinates($first, $second)
+    public function isEqualCoordinates($second)
     {
-        if (!($first instanceof CartesianCoordinate) || !($second instanceof CartesianCoordinate)) {
-            throw new InvalidArgumentException('Coordinates must implements \Nasa\Model\Coordinate\CartesianCoordinate');
+        if (!$second instanceof CartesianCoordinate) {
+            throw new InvalidArgumentException('Coordinates must implements \Nasa\Model\Coordinate\CartesianCoordinate, ' .
+                (is_object($second) ? get_class($second) : gettype($second)) . ' given');
         }
 
-        return $first->getX() == $second->getX() && $first->getY() == $second->getY();
+        return $this->getX() == $second->getX() && $this->getY() == $second->getY();
     }
 
 

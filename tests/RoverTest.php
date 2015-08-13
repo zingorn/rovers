@@ -8,7 +8,10 @@
 
 namespace Nasa\Tests;
 
-
+/**
+ * Class RoverTest
+ * @package Nasa\Tests
+ */
 class RoverTest 
 {
 
